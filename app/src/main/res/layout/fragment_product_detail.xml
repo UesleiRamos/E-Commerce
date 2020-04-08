@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="productDetailViewModel"
+            type="com.uesleiramos.e_commerce.ui.viewModel.ProductDetailViewModel" />
+    </data>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelinestart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.04136253" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.96107054" />
+
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carousel"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="32dp"
+                    app:layout_constraintBottom_toTopOf="@id/txt_name"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{productDetailViewModel.title}"
+                    android:textColor="@color/colorBlueDE000000"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@id/txt_desc"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/carousel"
+                    tools:text="Smart TV LED 32\ HD Samsung 32J4300" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@{productDetailViewModel.desc}"
+                    android:textColor="@color/colorGrey616161"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/txt_old_price_detail"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/txt_name"
+                    tools:text="@string/product_detail_descr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_old_price_detail"
+                    style="@style/OldPriceDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@{productDetailViewModel.oldPrice}"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/txt_desc"
+                    tools:text="R$ 2322.84" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_current_price_detail"
+                    style="@style/CurrentPriceDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@{productDetailViewModel.current_price}"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_old_price_detail"
+                    app:layout_constraintStart_toEndOf="@id/txt_old_price_detail"
+                    app:layout_constraintTop_toBottomOf="@id/txt_desc"
+                    app:layout_constraintTop_toTopOf="@id/txt_old_price_detail"
+                    tools:text="R$ 1.999,00" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_installment_detail"
+                    style="@style/InstallmentDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{productDetailViewModel.installment}"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/txt_current_price_detail"
+                    tools:text="10x de R$ 139,90" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_view_installment_detail"
+                    style="@style/ViewInstallmentDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/lbl_view_installment"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_installment_detail"
+                    app:layout_constraintStart_toEndOf="@id/txt_installment_detail"
+                    app:layout_constraintTop_toTopOf="@id/txt_installment_detail"
+                    tools:text="ver parcelamento" />
+
+                <View
+                    android:id="@+id/backgroundDividerOne"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorGreyE5E5E5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_installment_detail" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_Feature"
+                    style="@style/StyleSectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/lbl_feature"
+                    app:layout_constraintBottom_toTopOf="@id/rv_feature"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/backgroundDividerOne"
+                    tools:text="@string/lbl_feature" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_feature"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/backgroundDividerTwo"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_Feature"
+                    tools:listitem="@layout/rc_item_feature" />
+
+                <View
+                    android:id="@+id/backgroundDividerTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorGreyE5E5E5"
+                    app:layout_constraintBottom_toTopOf="@id/lbl_who_saw_buy"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rv_feature" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/lbl_who_saw_buy"
+                    style="@style/StyleSectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/lbl_who_saw_buy"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/backgroundDividerTwo"
+                    tools:text="@string/lbl_who_saw_buy" />
+
+
+                <include
+                    android:id="@+id/include"
+                    layout="@layout/include_quem_viu"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/btnConfim"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineend"
+                    app:layout_constraintStart_toStartOf="@id/guidelinestart"
+                    app:layout_constraintTop_toBottomOf="@id/lbl_who_saw_buy" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnConfim"
+                    style="@style/btnBuy"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/btn_buy"
+                    android:maxHeight="44dp"
+                    android:text="@string/lbl_buy"
+                    android:textAllCaps="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/include"
+                    app:layout_constraintVertical_bias="1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:id="@+id/text_erro_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/colorGrey616161"
+            tools:text="@string/erro_401" />
+    </ViewFlipper>
+</layout>

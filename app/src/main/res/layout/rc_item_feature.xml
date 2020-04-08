@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardspotlight"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_titulo"
+        style="@style/TitleFeature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Controle Remoto"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent"
+        tools:text="Controle Remoto" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_desc"
+        style="@style/DescFeature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@id/lbl_titulo"
+        tools:text="Sim" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

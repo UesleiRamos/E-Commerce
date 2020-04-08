@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="homeViewModel"
+            type="com.uesleiramos.e_commerce.ui.viewModel.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragments.HomeFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04136253" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96107054" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_home_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{homeViewModel.title}"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlue015195"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@id/txt_home_version"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineend"
+            app:layout_constraintStart_toStartOf="@+id/guidelinestart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.32999998"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="DEV ANDROID" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_home_version"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{homeViewModel.vesion}"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlue1281CE"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/txt_home_version_code"
+            app:layout_constraintEnd_toEndOf="@id/guidelineend"
+            app:layout_constraintStart_toStartOf="@id/guidelinestart"
+            app:layout_constraintTop_toBottomOf="@id/txt_home_title"
+            tools:text="Version (1.0.0)" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_home_version_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{homeViewModel.versionCode}"
+            android:textAlignment="center"
+            android:textColor="@color/colorGrey616161"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineend"
+            app:layout_constraintStart_toStartOf="@id/guidelinestart"
+            app:layout_constraintTop_toBottomOf="@id/txt_home_version"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="version_code (10000)" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

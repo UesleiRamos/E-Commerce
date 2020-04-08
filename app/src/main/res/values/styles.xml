@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="OldPrice">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textColor">@color/colorGrey616161</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="CurrentPrice">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textColor">@color/colorBlue015195</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TitleProduct">
+        <item name="android:textColor">@color/colorBlue015195</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="OldPriceDetail">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textColor">@color/colorBlueDE000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CurrentPriceDetail">
+        <item name="android:textAlignment">textEnd</item>
+        <item name="android:textColor">@color/colorBlue1281CE</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="InstallmentDetail">
+        <item name="android:textColor">@color/colorBlue1281CE</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ViewInstallmentDetail">
+        <item name="android:textColor">@color/colorBlue1281CE</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="btnBuy">
+        <item name="background">@drawable/btn_buy</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="StyleSectionTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorBlue015195</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="TitleFeature">
+        <item name="android:textColor">@color/colorGrey616161</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DescFeature">
+        <item name="android:textColor">@color/colorGrey616161</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

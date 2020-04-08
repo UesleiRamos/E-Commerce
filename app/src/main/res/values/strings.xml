@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">E-Commerce</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_product">Produto</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="full_name">Ueslei Fernando Guimarães dos Santos Ramos</string>
+    <string name="personal_email">uesleinando@gmail.com</string>
+    <string name="home_title">DEV ANDROID</string>
+    <string name="version">version (%s)</string>
+    <string name="version_code">version_code (%s)</string>
+    <string name="product_detail_descr">Smart TV LED 32\" HD Samsung 32J4300 com Connect Share Movie, Screen Mirroring, Wi-Fi, Entradas HDMI e Entrada USB</string>
+    <string name="lbl_buy">Comprar</string>
+    <string name="lbl_view_installment">ver parcelamento</string>
+    <string name="lbl_feature">Característica</string>
+    <string name="lbl_who_saw_buy">Quem Viu Comprou</string>
+
+    <!-- Erro -->
+    <string name="erro_401">Não autorizado</string>
+    <string name="erro_400_generic">Erro não tratado</string>
+    <string name="erro_500_generic">Erro catastrófico</string>
+</resources>
