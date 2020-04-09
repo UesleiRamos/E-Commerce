@@ -23,14 +23,6 @@
 │   └── viewmodel --------------- | Views models das classes Home, Product e ProductDetals
 └──util ------------------------- | Util do App.
 
-```
-
-## Resultado
-    - Desafios
-    - Linhas de raciocínio    
-    - Tempo gasto para execução do projeto
-        O aplicativo foi desenvolvido
-
 ## Bibliotecas e Frameworks definidos
 
 - LiveData
