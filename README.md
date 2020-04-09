@@ -23,6 +23,8 @@
 │   └── viewmodel --------------- | Views models das classes Home, Product e ProductDetals
 └──util ------------------------- | Util do App.
 
+```
+
 ## Bibliotecas e Frameworks definidos
 
 - LiveData
